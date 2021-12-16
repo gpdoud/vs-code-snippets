@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Cors constants to WebApi EntityFrameworkCore</Title>
+        </Header>
+        <Snippet>
+            <Code Language="CSharp">
+                <![CDATA[
+                    private readonly string DefaultCorsPolicy = "_defaultCorsPolicy";
+                    private string[] AllowedOrigins = { 
+                        "http://localhost", "https://localhost",
+                        "http://localhost:4200", "https://localhost:4200", // Angular
+                        "http://localhost:5500", "https://localhost:5500" // Live Server
+                    };
+                    private string[] AllowedMethods = {
+                        "GET", "POST", "PUT", "DELETE"
+                    };
+                ]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

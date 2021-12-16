@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Add programmatic migrations to WebApi EntityFrameworkCore</Title>
+        </Header>
+        <Snippet>
+            <Code Language="CSharp">
+                <![CDATA[
+                    using(var scope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope()) {
+                        scope.ServiceProvider.GetService<AppDbContext>().Database.Migrate();
+                    }
+                ]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

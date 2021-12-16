@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Cors use default policy in WebApi EntityFrameworkCore</Title>
+        </Header>
+        <Snippet>
+            <Code Language="CSharp">
+                <![CDATA[
+                    <?xml version="1.0" encoding="utf-8" ?>
+                    <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        autoReload="true"
+                        internalLogLevel="Info"
+                        internalLogFile="c:\temp\internal-nlog.txt">
+                    <targets>
+                        <target name="f" type="File" fileName="logs/log.txt" 
+                                layout="${longdate}|${event-properties:item=EventId_Id}|${uppercase:${level}}|${logger}|${message} ${exception:format=tostring}" />
+                    </targets>
+                    <rules>
+                        <logger name="*" minlevel="trace" writeTo="f" />
+                    </rules>
+                    </nlog>
+                ]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
